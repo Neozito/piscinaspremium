@@ -1,0 +1,230 @@
+/* Movimento aquático — sem dependências externas. */
+.water-loader{display:none;position:fixed;inset:0;z-index:9999;isolation:isolate;overflow:visible;background:linear-gradient(155deg,#073044 0%,#006c83 65%,#00a9b4 100%);color:#fff;pointer-events:none}.water-loading .water-loader{display:grid;place-items:center}.water-loader.draining{animation:water-drain .85s cubic-bezier(.65,0,.25,1) forwards}.loader-center{position:relative;z-index:2;display:grid;justify-items:center;text-align:center;gap:10px}.loader-center strong{font-size:clamp(25px,4vw,38px);letter-spacing:-.05em}.loader-center small{font-size:9px;letter-spacing:.2em;font-weight:700}.loader-rings{position:relative;width:116px;height:116px;display:grid;place-items:center;margin-bottom:12px}.loader-rings .icon{width:58px;height:58px;color:#8ef9ed;stroke-width:1.4}.loader-rings i{position:absolute;inset:6px;border:1px solid #8ef9ed80;border-radius:50%;animation:ring-out 1.6s ease-out infinite}.loader-rings i:nth-child(2){animation-delay:.38s}.loader-rings i:nth-child(3){animation-delay:.76s}.loader-line{height:2px;width:120px;background:#b6fff53d;overflow:hidden;margin-top:18px}.loader-line:before{content:'';display:block;height:100%;width:100%;background:#b6fff5;transform-origin:left;animation:loader-progress 1.2s ease-out forwards}.loader-shimmer{position:absolute;inset:0;overflow:hidden;background:repeating-radial-gradient(ellipse at 65% 10%,#b8ffed20 0 2px,transparent 5px 40px);background-size:170% 160%;opacity:.55;animation:water-glint 5s ease-in-out infinite alternate}.loader-wave{position:absolute;top:-99px;left:0;width:100%;height:100px;color:#073044;transform:rotate(180deg)}@keyframes water-drain{to{transform:translateY(115%);opacity:.3}}@keyframes ring-out{0%{transform:scale(.55);opacity:0}25%{opacity:.75}100%{transform:scale(1.4);opacity:0}}@keyframes loader-progress{from{transform:scaleX(.05)}to{transform:scaleX(1)}}@keyframes water-glint{to{background-position:90% 30%;transform:scale(1.08)}}
+/* Water-themed entrance: a translucent aqua wave sweeps across the photo. */
+.water-photo{position:relative;overflow:hidden}.water-photo:after{content:'';position:absolute;inset:-15% -25%;pointer-events:none;z-index:2;opacity:0;background:linear-gradient(110deg,transparent 20%,#76ece5a0 45%,#e4fffa90 50%,#1aa8c76b 56%,transparent 80%);transform:translateX(-105%) skewX(-12deg)}.water-photo.wet-reveal:after{animation:water-sweep .95s cubic-bezier(.22,.65,.25,1) forwards}.water-photo:hover:after{animation:water-hover .8s ease-out forwards}@keyframes water-sweep{0%{opacity:.8;transform:translateX(-100%) skewX(-12deg)}60%{opacity:.75}100%{opacity:0;transform:translateX(100%) skewX(-12deg)}}@keyframes water-hover{0%{opacity:.45;transform:translateX(-100%) skewX(-12deg)}100%{opacity:0;transform:translateX(100%) skewX(-12deg)}}
+.js .reveal{transform:translateY(23px);transition:opacity .7s ease,transform .85s cubic-bezier(.18,.65,.25,1)}.js .reveal.visible{opacity:1;transform:none}.js .reveal:focus-within{opacity:1;transform:none}.step-icon{position:relative}.step:hover .step-icon{animation:step-ripple .8s ease-out}@keyframes step-ripple{0%{box-shadow:0 0 0 0 #00a9b44d}100%{box-shadow:0 0 0 17px #00a9b400}}.model-photo{display:block}.model-photo img{transition:transform .65s cubic-bezier(.2,.6,.2,1)}.model-photo:hover img{transform:scale(1.045)}.model-body h3 a:hover{color:var(--teal)}
+/* Individual project pages */
+.project-page .project-intro{padding:122px 0 70px;background:linear-gradient(155deg,#eef8f8,#fff 70%)}.breadcrumbs{display:flex;flex-wrap:wrap;align-items:center;gap:7px;color:var(--muted);font-size:13px;margin-bottom:30px}.breadcrumbs a:hover{color:var(--teal)}.breadcrumbs .icon{width:14px;height:14px}.breadcrumbs>span{font-weight:700;color:var(--ink)}.project-grid{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:55px}.project-photo{border-radius:18px;box-shadow:var(--shadow);min-width:0}.project-photo img{width:100%;height:clamp(360px,36vw,490px);object-fit:cover}.project-photo-tag{position:absolute;left:20px;bottom:20px;background:#fff;color:var(--ink);border-radius:5px;padding:8px 13px;font-size:10px;font-weight:800;letter-spacing:.1em}.project-copy h1{font-size:clamp(2.6rem,5vw,4.5rem);margin:15px 0;letter-spacing:-.06em}.project-copy h1 em{font-style:normal;color:var(--teal)}.project-copy h2{font-size:clamp(1.25rem,2vw,1.65rem);letter-spacing:-.035em;margin-bottom:15px}.project-copy>p{font-size:15px}.project-checks{display:grid;gap:9px;padding:0;list-style:none;margin:24px 0}.project-checks li{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:650}.project-checks .icon{width:20px;height:20px;color:var(--teal)}.project-copy>small{display:block;font-size:11px;color:var(--muted);margin-top:12px}.project-technical{background:var(--pale)}.technical-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:24px}.pool-plan,.spec-panel{border:1px solid var(--line);border-radius:16px;background:#fff;padding:32px}.pool-plan{display:flex;flex-direction:column;justify-content:center;text-align:center;gap:12px;min-height:320px;background-color:#fff;background-image:linear-gradient(#008c980a 1px,transparent 1px),linear-gradient(90deg,#008c980a 1px,transparent 1px);background-size:18px 18px}.plan-label,.spec-kicker{font-size:11px;letter-spacing:.12em;font-weight:800;color:var(--teal)}.plan-dimension{position:relative;color:var(--ink);font-size:13px;font-weight:700;display:grid;place-items:center}.plan-length{height:20px;border-bottom:1px solid #61939e;margin:8px 20px 0 48px}.plan-length:before,.plan-length:after{content:'';position:absolute;bottom:-5px;height:9px;width:1px;background:#61939e}.plan-length:before{left:0}.plan-length:after{right:0}.plan-body{display:flex;align-items:stretch;gap:15px;margin-right:20px;min-height:145px}.plan-width{width:32px;flex-shrink:0;border-right:1px solid #61939e;writing-mode:vertical-rl;transform:rotate(180deg)}.plan-water{flex:1;border:7px solid #bee7e8;box-shadow:inset 0 0 0 1px #32aebd;background:repeating-radial-gradient(ellipse at 25% 30%,#a5f0ee 0,#65d5e3 3px,#41b7d2 7px,#8ce5e5 13px);border-radius:14px;display:grid;place-items:center;color:#073044;font-size:13px;font-weight:800;min-width:0;position:relative;overflow:hidden}.plan-water.compacta,.plan-water.fibra{border-radius:44%}.plan-water.prainha:before,.plan-water.hidromassagem:before{content:'';position:absolute;left:0;top:0;bottom:0;width:25%;background:#d3f8f8a0;border-right:2px solid #f4ffff}.plan-water.borda-infinita{border-right:2px solid #28a6bd;box-shadow:5px 0 0 #a5e4ea}.pool-plan small{font-size:11px;color:var(--muted)}.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}.spec{display:flex;align-items:center;gap:13px;background:var(--pale);padding:15px;border-radius:10px;min-width:0}.spec>.icon{width:27px;height:27px;color:var(--teal)}.spec small{display:block;font-size:11px;color:var(--muted)}.spec strong{display:block;line-height:1.3;font-size:15px;overflow-wrap:anywhere}.material{padding-top:10px;border-top:1px solid var(--line);font-size:14px}.material p{margin-top:3px}.project-disclaimer{font-size:12px;margin-top:15px}.project-steps{grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}.project-steps .step{padding:24px 17px}.install-note{display:flex;gap:15px;align-items:flex-start;padding:24px;background:var(--pale);border-radius:12px;margin-top:24px}.install-note>.icon{color:var(--teal);width:30px;height:30px}.install-note strong{font-size:16px}.install-note p{font-size:14px;margin-top:4px}.project-cta{background:linear-gradient(90deg,#062d40f0,#063b4a80),url('../imagens/hero.webp') center 55%/cover;color:white;padding:75px 0}.project-cta h2{font-size:clamp(2.4rem,5vw,4.2rem);margin:18px 0}.project-cta p{color:#e3f7f6;max-width:550px;margin:0 0 24px}.project-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.project-related{background:var(--pale)}.project-page .section.contact{padding-top:85px}.project-page .floating-wa{display:grid}
+@media(max-width:1000px){.project-grid{gap:30px}.project-steps{grid-template-columns:repeat(3,minmax(0,1fr))}.pool-plan,.spec-panel{padding:22px}}@media(max-width:850px){.project-grid,.technical-grid{grid-template-columns:1fr}.project-page .project-intro{padding:100px 0 55px}.project-photo img{height:400px}.project-copy h1{font-size:clamp(2.6rem,7vw,4.5rem)}}@media(max-width:540px){.project-photo img{height:265px}.project-grid{gap:25px}.project-copy .btn{white-space:normal;width:100%}.project-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.project-steps .step{padding:18px 12px}.project-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.pool-plan,.spec-panel{padding:17px}.spec{gap:7px;padding:11px}.spec>.icon{width:20px;height:20px}.spec strong{font-size:13px}.project-page .section.contact{padding-top:55px}.project-cta{padding:55px 0}.project-cta h2 br{display:none}}@media(prefers-reduced-motion:reduce){.water-loader,.water-loading .water-loader{display:none!important}.water-photo:after{display:none}.js .reveal{opacity:1;transform:none}}
+
+/* The new section's color meets its crest at the top edge. */
+:root {
+  --wave-height: clamp(48px, 7vw, 96px);
+}
+
+.water-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.water-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.water-boundary {
+  top: 0;
+  height: var(--wave-height);
+  transform: translateY(calc(-100% + 3px));
+}
+
+.water-boundary::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 3px;
+  background: var(--wave-surface, #fff);
+}
+
+.water-wave svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  animation-name: wave-flow;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.water-wave.is-flowing svg {
+  animation-play-state: running;
+}
+
+.wave-back {
+  fill: #53d8d4;
+  opacity: .36;
+  animation-duration: 13s;
+  animation-direction: reverse;
+}
+
+.wave-middle {
+  fill: #98ede6;
+  opacity: .68;
+  animation-duration: 11s;
+}
+
+.wave-surface {
+  fill: var(--wave-surface, #fff);
+  animation-duration: 17s;
+  animation-direction: reverse;
+}
+
+@keyframes wave-flow {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.process, .faq-section, .testimonials, .project-technical, .project-related {
+  --wave-surface: var(--pale);
+}
+
+.cta-banner, .project-cta {
+  --wave-surface: #0a475a;
+}
+
+.cta-banner::before {
+  background:
+    linear-gradient(var(--wave-surface), #0a475a00 95px),
+    linear-gradient(90deg, #073042e8, #075368b3 60%, #0753684d);
+}
+
+.project-cta {
+  background:
+    linear-gradient(var(--wave-surface), #0a475a00 95px),
+    linear-gradient(90deg, #062d40f0, #063b4a80),
+    url('../imagens/hero.webp') center 55% / cover;
+}
+
+.benefits {
+  --wave-surface: #073448;
+  padding-bottom: max(55px, calc(var(--wave-height) + 12px));
+}
+
+.location {
+  padding-bottom: calc(var(--wave-height) + 12px);
+}
+
+footer.water-section {
+  --wave-surface: #062b3c;
+  background:
+    linear-gradient(var(--wave-surface), #062b3c00 70px),
+    radial-gradient(ellipse at 75% 18%, #104658, transparent 68%),
+    var(--wave-surface);
+}
+
+/* Keep the poster visible when scroll animation is unavailable. */
+.hero-content {
+  padding-block: clamp(88px, 14svh, 115px);
+}
+
+.hero-media video {
+  visibility: hidden;
+}
+
+.hero-white {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background: #fff;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-track:not(.hero-motion) .hero-progress {
+  display: none;
+}
+
+.hero-motion {
+  height: 370vh;
+  height: 370svh;
+}
+
+.hero-motion .hero-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+}
+
+.hero-motion .hero-sticky::before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  inset: 0 0 auto;
+  height: 130px;
+  background: linear-gradient(#052434d9, transparent);
+  opacity: var(--hero-title-exit, 0);
+  pointer-events: none;
+}
+
+.hero-motion .hero-video-ready video {
+  visibility: visible;
+}
+
+.hero-motion .hero-media {
+  transform: scale(var(--hero-scale, 1));
+}
+
+.hero-motion .hero-shade {
+  opacity: var(--hero-shade, 1);
+}
+
+.hero-motion .hero-title {
+  opacity: calc(1 - var(--hero-title-exit, 0));
+  transform: translateY(calc(-22px * var(--hero-title-exit, 0)));
+}
+
+.hero-motion .hero-copy p {
+  opacity: calc(1 - var(--hero-description-exit, 0));
+  transform: translateY(calc(-18px * var(--hero-description-exit, 0)));
+}
+
+.hero-motion .hero-actions {
+  opacity: calc(1 - var(--hero-actions-exit, 0));
+  transform: translateY(calc(-14px * var(--hero-actions-exit, 0)));
+}
+
+.hero-motion .scroll-cue {
+  opacity: calc(1 - var(--hero-cue-exit, 0));
+}
+
+.hero-motion .is-past {
+  visibility: hidden;
+}
+
+.hero-motion .hero-white {
+  opacity: var(--hero-white, 0);
+}
+
+.hero-motion .hero-progress {
+  opacity: calc(1 - var(--hero-progress-exit, 0));
+}
+
+.hero-motion .hero-progress span {
+  transform: scaleX(var(--hero-progress, 0));
+}
+
+@media (max-width: 850px) {
+  .hero-motion { height: 270vh; height: 270svh; }
+}
+
+@media (max-width: 540px) {
+  .hero-motion { height: 240vh; height: 240svh; }
+}
+
+@media (max-width: 540px) and (max-height: 680px) {
+  .hero-content { padding-block: 70px 66px; }
+  .hero-copy { padding: 0; }
+  .hero-copy .eyebrow { margin-bottom: 12px; }
+  .hero-copy h1 { font-size: clamp(2.28rem, 10.8vw, 3.25rem); }
+  .hero-copy p { margin-block: 14px 18px; }
+}
+
+@media (max-height: 530px) {
+  .hero-content { padding-bottom: 95px; }
+}

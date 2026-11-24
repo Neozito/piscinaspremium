@@ -1,0 +1,28 @@
+PISCINAS PREMIUM — SITE ONE PAGE INTERATIVO
+
+PUBLICAÇÃO
+1. Extraia o ZIP. O index.html deve ficar na raiz public_html (cPanel), ao lado da pasta assets.
+2. Edite assets/js/config.js: empresa, WhatsApp com DDI 55, telefone, e-mail, endereço, horários, redes sociais, condições de pagamento e domínio real.
+3. O nome e símbolo de Piscinas Premium são uma identidade conceitual. Substitua-os no HTML pelo material oficial quando disponível. Revise textos, categorias e bandeiras conforme a oferta da empresa.
+4. Publique com HTTPS. Abra o site e teste a rolagem, o mapa, os links e o envio no WhatsApp. Também pode usar GitHub Pages ou Cloudflare Pages, sem PHP ou banco de dados.
+
+HERO INTERATIVO
+O vídeo original foi otimizado para MP4 H.264, 1280x720, sem áudio. O scroll controla currentTime do vídeo com JavaScript nativo. Para baixo ele avança e para cima ele retrocede. O título, o texto e os botões saem em etapas durante a rolagem. O vídeo percorre a cena até a água escorrer completamente. Nos últimos instantes, a imagem se funde ao branco da seção Quem somos. O vídeo fica em assets/videos/hero.mp4 e a imagem de espera em assets/imagens/hero-poster.webp. A duração da rolagem pode ser alterada em .hero-motion em assets/css/water.css. O hero usa o pôster estático quando há preferência por movimento reduzido, em janelas de pouca altura ou quando o vídeo está indisponível. As ondas das seções usam três camadas e se movimentam enquanto estão na tela.
+
+GALERIA
+12 imagens WebP diferentes, geradas por IA, em grade de 4 por fileira no desktop e 2 no celular. São ilustrações, não fotografias de obras realizadas. O lightbox amplia as mesmas imagens (resolução original de cada recorte próxima a 408x305). O catálogo reaproveita fotos da galeria. Substitua por fotos reais de maior resolução se quiser um lightbox mais detalhado.
+
+CONTATO
+Sem número informado, o site exibe a mensagem pronta para copiar, sem abrir conversa com um destinatário fictício. Após configurar o número, os botões direcionam ao WhatsApp, com mensagem pronta. O mapa mostra Cascavel/PR em modo demonstração até informar o endereço comercial. O Google Maps e o WhatsApp necessitam de conexão à internet. As redes sociais também precisam dos links reais. Não há depoimentos inventados: a seção fica oculta até incluir avaliações verdadeiras no config.js. Revise a política de privacidade para a empresa e confirme as condições de pagamento. Nenhum rastreador foi ativado sem os IDs e consentimento correspondentes. Adicione sitemap.xml após conhecer o domínio definitivo.
+
+VALIDAÇÃO
+Nesta atualização, foram testados no Chrome o hero em desktop e celular, o avanço e o retorno do vídeo, o pôster quando o vídeo está indisponível, as ondas entre as seções, a transição para o rodapé e o acesso à página de projeto pelo catálogo. Também foram conferidos os caminhos locais e a sintaxe do JavaScript.
+
+VERSÃO 2 — EXPERIÊNCIA AQUÁTICA E PÁGINAS DE PROJETO
+- Transição de abertura com ondas e círculos de água; encerramento automático mesmo se recursos demorarem.
+- Animações aquáticas de entrada nas seções e reflexos nas imagens, com respeito a movimento reduzido.
+- Ícone de instalação substituído por capacete de segurança vetorial.
+- Cada um dos seis cards do catálogo abre sua própria página em projetos/.
+- As páginas possuem ficha técnica, esquema visual, etapas de instalação, referências, contatos e formulário pré-selecionado.
+- Edite as medidas, descrições e fichas diretamente nos arquivos HTML de projetos/. As dimensões são SOMENTE EXEMPLOS ilustrativos; substitua por dados reais antes da divulgação comercial. As imagens são referências geradas por IA, não obras reais.
+- Dados comerciais permanecem em assets/js/config.js. Não é necessário configurar banco de dados.
